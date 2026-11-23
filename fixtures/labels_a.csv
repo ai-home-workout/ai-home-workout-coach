@@ -1,0 +1,5 @@
+video,rep_index,start_sec,end_sec,valid,error_type,labeler
+side_mixed.mp4,1,0.60,2.60,1,,labeler_a
+side_mixed.mp4,2,3.00,5.00,0,shallow_depth,labeler_a
+side_mixed.mp4,3,5.40,7.40,1,,labeler_a
+side_mixed.mp4,4,7.80,9.80,0,excessive_lean,labeler_a

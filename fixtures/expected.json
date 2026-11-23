@@ -1,0 +1,169 @@
+{
+  "side_good": [
+    {
+      "start": 600,
+      "end": 2600,
+      "valid": true,
+      "errorTypes": [],
+      "held": false
+    },
+    {
+      "start": 3000,
+      "end": 5000,
+      "valid": true,
+      "errorTypes": [],
+      "held": false
+    },
+    {
+      "start": 5400,
+      "end": 7400,
+      "valid": true,
+      "errorTypes": [],
+      "held": false
+    }
+  ],
+  "side_shallow": [
+    {
+      "start": 600,
+      "end": 2600,
+      "valid": false,
+      "errorTypes": [
+        "shallow_depth"
+      ],
+      "held": false
+    },
+    {
+      "start": 3000,
+      "end": 5000,
+      "valid": false,
+      "errorTypes": [
+        "shallow_depth"
+      ],
+      "held": false
+    },
+    {
+      "start": 5400,
+      "end": 7400,
+      "valid": false,
+      "errorTypes": [
+        "shallow_depth"
+      ],
+      "held": false
+    }
+  ],
+  "side_lean": [
+    {
+      "start": 600,
+      "end": 2600,
+      "valid": false,
+      "errorTypes": [
+        "excessive_lean"
+      ],
+      "held": false
+    },
+    {
+      "start": 3000,
+      "end": 5000,
+      "valid": false,
+      "errorTypes": [
+        "excessive_lean"
+      ],
+      "held": false
+    },
+    {
+      "start": 5400,
+      "end": 7400,
+      "valid": false,
+      "errorTypes": [
+        "excessive_lean"
+      ],
+      "held": false
+    }
+  ],
+  "side_fast": [
+    {
+      "start": 600,
+      "end": 1050,
+      "valid": false,
+      "errorTypes": [
+        "too_fast"
+      ],
+      "held": false
+    },
+    {
+      "start": 1450,
+      "end": 1900,
+      "valid": false,
+      "errorTypes": [
+        "too_fast"
+      ],
+      "held": false
+    },
+    {
+      "start": 2300,
+      "end": 2750,
+      "valid": false,
+      "errorTypes": [
+        "too_fast"
+      ],
+      "held": false
+    }
+  ],
+  "side_occluded": [
+    {
+      "start": 600,
+      "end": 2600,
+      "valid": true,
+      "errorTypes": [],
+      "held": false
+    },
+    {
+      "start": 3000,
+      "end": 5000,
+      "valid": false,
+      "errorTypes": [],
+      "held": true
+    },
+    {
+      "start": 5400,
+      "end": 7400,
+      "valid": true,
+      "errorTypes": [],
+      "held": false
+    }
+  ],
+  "side_mixed": [
+    {
+      "start": 600,
+      "end": 2600,
+      "valid": true,
+      "errorTypes": [],
+      "held": false
+    },
+    {
+      "start": 3000,
+      "end": 5000,
+      "valid": false,
+      "errorTypes": [
+        "shallow_depth"
+      ],
+      "held": false
+    },
+    {
+      "start": 5400,
+      "end": 7400,
+      "valid": true,
+      "errorTypes": [],
+      "held": false
+    },
+    {
+      "start": 7800,
+      "end": 9800,
+      "valid": false,
+      "errorTypes": [
+        "excessive_lean"
+      ],
+      "held": false
+    }
+  ]
+}
