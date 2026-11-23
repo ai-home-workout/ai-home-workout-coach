@@ -127,7 +127,7 @@
 - **로그인한 사람의 개인 브랜치에서만 커밋해요.** `main`과 남의 브랜치에는 커밋하거나 푸시하지 않아요.
 - 커밋 메시지: `[타입] 요약` (`feat`, `fix`, `refactor`, `docs`, `chore`, `test`, `data`). 요약은 한국어로 짧게.
 - 커밋 하나에는 변경 하나만 담아요.
-- `main`에는 개인 브랜치 → `main` PR로만 합쳐요. 머지는 **Create a merge commit**, 개인 브랜치는 지우지 않아요.
+- `main`에는 개인 브랜치 → `main` PR로만 합쳐요. GitHub 규칙으로 직접 푸시가 막혀 있어요(`TeamRules.md` 8절). 푸시가 `GH013`으로 거절되면 우회하려 하지 말고 개인 브랜치로 옮겨 PR을 올리자고 안내해요. 머지는 **Create a merge commit**, 개인 브랜치는 지우지 않아요.
 - **금지:** `git push --force`, rebase, `main` 직접 푸시, 영상·`node_modules/`·`.env`·모델 파일 커밋
 - 커밋, 푸시, PR 생성은 사용자가 요청할 때만 해요.
 

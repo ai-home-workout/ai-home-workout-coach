@@ -1,6 +1,6 @@
 # 득근득근 팀 규칙: Git · PR
 
-`main`은 항상 `npm test`가 통과하고 `web`이 빌드되는 상태를 유지해요. 각자 **자기 이름 브랜치**에서 작업하고, 할 일 하나가 끝나면 PR로 `main`에 합쳐요. `main`에는 직접 푸시하지 않아요.
+`main`은 항상 `npm test`가 통과하고 `web`이 빌드되는 상태를 유지해요. 각자 **자기 이름 브랜치**에서 작업하고, 할 일 하나가 끝나면 PR로 `main`에 합쳐요. **`main`에는 PR로만 합칠 수 있어요.** GitHub 설정으로 직접 푸시가 막혀 있어요(8절).
 
 ## 0. 처음 한 번
 
@@ -87,7 +87,7 @@ git push
 
 - 자기 역할 폴더만 고쳤다면 본인이 머지해도 돼요.
 - 남의 역할 폴더나 `shared/`를 건드렸다면 그 담당자의 승인을 받고 머지해요.
-- 머지는 **Create a merge commit**으로 해요. Squash는 쓰지 않아요.
+- 머지는 **Create a merge commit**으로 해요. Squash · Rebase 버튼은 GitHub 설정에서 꺼 뒀어요.
 - 머지한 뒤에도 개인 브랜치는 **지우지 않아요.**
 - 머지했으면 단톡방에 알려요.
 
@@ -107,8 +107,38 @@ git push
 
 ## 7. 금지
 
-- `main`에 직접 푸시
+- `main`에 직접 푸시 (해도 GitHub가 거절해요)
 - 남의 개인 브랜치에 푸시
 - `git push --force`, 개인 브랜치 rebase
 - 공용 계약을 혼자 바꾸기
 - **영상 커밋** (얼굴이 나오는 개인정보예요. 데이터는 좌표로만 녹화해요), `node_modules/`, `dist/`, `.env`, 모델 파일(`*.task`) 커밋. `git add -f`는 쓰지 않아요.
+
+## 8. GitHub 설정 (`main` 보호)
+
+아래 규칙은 GitHub가 직접 막아요. 바꾸려면 팀에서 먼저 이야기해요.
+
+**Settings → Rules → Rulesets** (`main 보호`, 대상: 기본 브랜치 `main`만, Bypass list 없음)
+
+| 규칙                                  | 설정          | 뜻                                                                    |
+| ------------------------------------- | ------------- | --------------------------------------------------------------------- |
+| Require a pull request before merging | ✅ (승인 0명) | `main`은 PR로만 바꿀 수 있어요. 승인은 필수가 아니에요(4절 리뷰 규칙) |
+| └ Allowed merge methods               | Merge만       | Squash · Rebase 머지는 못 해요                                        |
+| Block force pushes                    | ✅            | `main`을 강제로 덮어쓸 수 없어요                                      |
+| Restrict deletions                    | ✅            | `main`을 지울 수 없어요                                               |
+| Restrict creations                    | ⬜            | 켜면 브랜치 생성이 막힐 수 있어서 꺼 둬요                             |
+| Restrict updates                      | ⬜            | 켜면 PR 머지까지 막혀서 꺼 둬요                                       |
+
+**Settings → General → Pull Requests**
+
+- Allow merge commits만 켜고, squash · rebase merging은 꺼요.
+- Automatically delete head branches는 꺼요(개인 브랜치는 머지 후에도 남겨요).
+
+**개인 브랜치(`syw77` 등)에는 규칙을 걸지 않아요.** 각자 자기 브랜치에는 자유롭게 푸시해요.
+
+`main`에 직접 푸시하면 `GH013: Repository rule violations` 같은 메시지와 함께 거절돼요. 그러면 실수로 `main`에 만든 커밋을 자기 브랜치로 옮겨서 PR을 올려요.
+
+```bash
+git switch syw77      # 자기 브랜치
+git merge main        # main에 잘못 만든 커밋을 가져오기
+git push              # 그다음 GitHub에서 PR
+```
