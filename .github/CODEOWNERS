@@ -1,0 +1,23 @@
+# 역할: A 최지민 · B 김진성 · C 강소영 · D 손연우 (docs/tasks.md 역할 표와 같게 유지해요).
+# 아래쪽 줄이 위쪽 줄보다 우선이에요. 그래서 /web/src/game/은 /web/ 다음에 둬요.
+
+# A. 데이터 (최지민)
+/data/                         @qorhvkqorhvk
+/labels/                       @qorhvkqorhvk
+/extract/                      @qorhvkqorhvk
+/docs/data-collection-guide.md @qorhvkqorhvk
+
+# B. 판정 · 평가 (김진성)
+/core/                         @Jinsung2323
+/eval/                         @Jinsung2323
+
+# C. 웹 앱 (강소영)
+/web/                          @soyoung0108
+
+# D. 게임 · 통합 (손연우)
+/web/src/game/                   @SYW77
+/docs/game-design.md             @SYW77
+/docs/mentoring/                 @SYW77
+
+# 공용 계약은 네 명 모두
+/shared/      @soyoung0108 @SYW77 @Jinsung2323 @qorhvkqorhvk
