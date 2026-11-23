@@ -1,0 +1,21 @@
+{
+  "exercise": "squat",
+  "minVisibility": 0.5,
+  "segment": {
+    "startBelowKneeDeg": 160,
+    "endAboveKneeDeg": 165,
+    "minSegmentMs": 200
+  },
+  "rules": {
+    "shallow_depth": { "maxBottomKneeDeg": 100 },
+    "excessive_lean": { "maxTorsoLeanDeg": 45 },
+    "knee_valgus": { "minKneeToAnkleWidthRatio": 0.8 },
+    "too_fast": { "minRepMs": 800 }
+  },
+  "hold": {
+    "minVisibleFrameRatio": 0.8
+  },
+  "safety": {
+    "consecutiveErrorsForRest": 3
+  }
+}
