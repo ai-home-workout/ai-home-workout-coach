@@ -1,0 +1,313 @@
+:root {
+  font-family: system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  color: #1d2129;
+  background: #f4f6f8;
+}
+body {
+  margin: 0;
+}
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+}
+.app-header h1 {
+  margin: 0;
+}
+.app-header p {
+  margin: 4px 0 16px;
+  color: #5a6270;
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.08);
+}
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 16px;
+}
+legend {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+fieldset label {
+  display: block;
+  padding: 4px 0;
+}
+label.disabled {
+  color: #9aa1ab;
+}
+.row {
+  display: flex;
+  gap: 16px;
+}
+.row input {
+  display: block;
+  width: 80px;
+  margin-top: 4px;
+  padding: 6px;
+}
+.note {
+  font-size: 0.85rem;
+  color: #5a6270;
+}
+button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #c9ced6;
+  background: #fff;
+  cursor: pointer;
+}
+button.primary {
+  background: #2f6fed;
+  border-color: #2f6fed;
+  color: #fff;
+}
+.workout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+}
+.camera {
+  position: relative;
+  background: #111;
+  border-radius: 12px;
+  min-height: 360px;
+  overflow: hidden;
+}
+.camera video,
+.camera canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scaleX(-1); /* 거울처럼 보여 줘요 (판정에는 영향 없음) */
+}
+.camera-status {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 8px;
+  padding: 24px;
+  color: #fff;
+  text-align: center;
+}
+.debug {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgb(0 0 0 / 0.6);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+}
+.badge {
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  left: 8px;
+  background: rgb(255 255 255 / 0.85);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+.hud .set {
+  margin: 0;
+  color: #5a6270;
+}
+.hud .count {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0;
+}
+.hud .count small {
+  font-size: 1.5rem;
+  color: #5a6270;
+}
+.combo {
+  color: #e07b00;
+  font-weight: 700;
+}
+.message {
+  padding: 10px;
+  border-radius: 8px;
+}
+.message.good {
+  background: #e6f6ea;
+}
+.message.error {
+  background: #fdecea;
+}
+.message.hold {
+  background: #fff6db;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgb(0 0 0 / 0.4);
+  display: grid;
+  place-items: center;
+}
+@media (max-width: 720px) {
+  .workout {
+    grid-template-columns: 1fr;
+  }
+}
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.app-header p {
+  margin-bottom: 0;
+}
+.tabs {
+  display: flex;
+  gap: 4px;
+}
+.tabs button.active {
+  background: #1d2129;
+  border-color: #1d2129;
+  color: #fff;
+}
+.field {
+  display: block;
+  margin: 8px 0;
+  font-weight: 600;
+}
+.field input,
+.field select {
+  display: block;
+  margin-top: 4px;
+  padding: 6px;
+  font-weight: normal;
+}
+.script {
+  background: #f4f6f8;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 12px 0;
+}
+.script p {
+  margin: 6px 0 0;
+}
+.countdown {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 8rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 12px rgb(0 0 0 / 0.6);
+}
+.rec {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #d93025;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+.review,
+.saved {
+  margin-top: 12px;
+}
+.review button {
+  margin: 4px 4px 0 0;
+}
+.saved ul {
+  margin: 4px 0;
+  padding-left: 20px;
+}
+.labeler .toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+  margin-bottom: 12px;
+}
+.stage {
+  position: relative;
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+.stage canvas {
+  max-width: 100%;
+  height: auto;
+}
+.timeline {
+  position: relative;
+  height: 36px;
+  margin-top: 8px;
+}
+.timeline .bar {
+  position: absolute;
+  top: 0;
+  height: 10px;
+  border-radius: 3px;
+}
+.timeline .bar.good {
+  background: #34a853;
+}
+.timeline .bar.bad {
+  background: #d93025;
+}
+.timeline .bar.draft {
+  background: #2f6fed;
+  opacity: 0.6;
+}
+.timeline input[type='range'] {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 12px;
+  width: 100%;
+}
+.controls {
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+label.button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #c9ced6;
+  background: #fff;
+  cursor: pointer;
+  font-weight: normal;
+}
+button.link {
+  border: none;
+  background: none;
+  padding: 0;
+  color: #2f6fed;
+  text-decoration: underline;
+}
+.rep-list {
+  padding-left: 20px;
+}
+.rep-list li {
+  margin: 4px 0;
+}
+.field input[hidden] {
+  display: none;
+}
+.stage canvas {
+  max-height: 60vh;
+  width: auto;
+}
