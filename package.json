@@ -1,0 +1,21 @@
+{
+  "name": "ai-home-workout-coach",
+  "private": true,
+  "type": "module",
+  "description": "실시간 홈트레이닝 AI 운동 코치 (득근득근) — 판정 로직 · 평가 · 공용 계약",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test \"shared/test/*.test.js\" \"core/test/*.test.js\" \"eval/test/*.test.js\"",
+    "eval": "node eval/evaluate.js",
+    "fixtures": "node fixtures/tools/generate.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "kappa": "node eval/kappa.js",
+    "check:coords": "node shared/check-coords.js"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  }
+}

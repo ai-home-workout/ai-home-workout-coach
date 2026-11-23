@@ -218,3 +218,40 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ===== 득근득근 프로젝트 =====
+# 영상 원본은 절대 커밋하지 않아요 (팀 공유 드라이브에 둬요)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.m4v
+*.MP4
+*.MOV
+videos/
+raw/
+
+# MediaPipe 모델 파일 (README의 다운로드 안내를 따라요)
+*.task
+models/
+
+# Node
+node_modules/
+dist/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 환경 · 에디터
+.env
+.env.*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.claude/settings.local.json
